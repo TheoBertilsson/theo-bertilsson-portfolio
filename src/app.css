@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+	--breakpoint-lg: 1024px;
+	--breakpoint-md: 842px;
+	--breakpoint-xs: 400px;
 	--color-menu-link-hover: #6a7282;
 }

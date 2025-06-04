@@ -7,14 +7,14 @@
 </script>
 
 <header class="flex w-full items-center justify-center bg-white">
-	<nav class=" flex w-full max-w-5xl justify-between py-7" aria-label="Main navigation">
+	<nav class=" flex w-full max-w-5xl justify-between p-5 py-7 sm:p-10" aria-label="Main navigation">
 		<a href="/" class="text-xl font-bold">THEO</a>
-		<div class="relative flex size-[30px] w-40 items-center justify-end">
+		<div class="relative flex w-40 items-center justify-end">
 			{#if isMenuOpen}
 				<ul
 					in:fly={{ duration: 100, x: 30 }}
 					out:fly={{ duration: 100, x: 30 }}
-					class="flex gap-4 pr-12"
+					class="xs:static xs:gap-4 xs:pr-12 absolute top-8 flex gap-4"
 					id="main-menu"
 				>
 					<li class="hover:text-menu-link-hover font-semibold"><a href="/work">Work</a></li>
