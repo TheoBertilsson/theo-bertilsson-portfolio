@@ -16,9 +16,9 @@
 					out:fly={{ duration: 100, x: 30 }}
 					class="flex gap-4 pr-12"
 				>
-					<li class="hover:underline"><a href="/work">Work</a></li>
-					<li class="hover:underline"><a href="/about">About</a></li>
-					<li class="hover:underline"><a href="/contact">Contact</a></li>
+					<li class="font-semibold hover:text-gray-500"><a href="/work">Work</a></li>
+					<li class="font-semibold hover:text-gray-500"><a href="/about">About</a></li>
+					<li class="font-semibold hover:text-gray-500"><a href="/contact">Contact</a></li>
 				</ul>
 				<button
 					transition:fade={{ duration: 100 }}
