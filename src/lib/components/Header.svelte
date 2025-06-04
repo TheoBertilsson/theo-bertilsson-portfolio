@@ -6,8 +6,8 @@
 	let isMenuOpen = $state(false);
 </script>
 
-<header class="w-full bg-white">
-	<nav class="flex w-full justify-between px-8 py-7" aria-label="Main navigation">
+<header class="flex w-full items-center justify-center bg-white">
+	<nav class=" flex w-full max-w-5xl justify-between py-7" aria-label="Main navigation">
 		<a href="/" class="text-xl font-bold">THEO</a>
 		<div class="relative flex size-[30px] w-40 items-center justify-end">
 			{#if isMenuOpen}
