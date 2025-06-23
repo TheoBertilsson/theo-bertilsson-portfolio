@@ -1,0 +1,19 @@
+import { createClient, type Entry } from 'contentful';
+import type { PageServerLoad } from './$types';
+import { CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_SPACE_ID } from '$env/static/private';
+
+export const load = (async () => {
+	let works: undefined | Entry[];
+	const client = createClient({
+		space: CONTENTFUL_SPACE_ID,
+		accessToken: CONTENTFUL_ACCESS_TOKEN
+	});
+
+	const response = await client.getEntries({
+		content_type: 'work'
+	});
+
+	works = response.items;
+	console.log(works);
+	return { works };
+}) satisfies PageServerLoad;
