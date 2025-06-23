@@ -2,6 +2,8 @@
 	import profileImage from '$lib/assets/profileImageWithBackground.png';
 	import deadliftPlaceholder from '$lib/assets/deadlift.png';
 	import copyIcon from '$lib/assets/copy.svg';
+
+	let { data } = $props();
 </script>
 
 <main class="mx-auto flex max-w-5xl flex-col items-center gap-10 p-5 sm:p-10 md:gap-20">
@@ -35,10 +37,15 @@
 				>
 			</div>
 			<div class="flex w-full max-w-5xl flex-col gap-4 sm:grid sm:grid-cols-2">
-				<div class="aspect-square w-full bg-gray-400">1</div>
-				<div class="aspect-square w-full bg-gray-400">2</div>
-				<div class="aspect-square w-full bg-gray-400">3</div>
-				<div class="aspect-square w-full bg-gray-400">4</div>
+				{#each data.works as work}
+					<a href={`/${work.fields.slug}`}
+						><img
+							src={work.fields.thumbnail?.fields.file.url}
+							alt=""
+							class="aspect-square w-full overflow-clip object-center"
+						/></a
+					>
+				{/each}
 			</div>
 		</section>
 		<section class="flex w-full flex-col items-start gap-5">
