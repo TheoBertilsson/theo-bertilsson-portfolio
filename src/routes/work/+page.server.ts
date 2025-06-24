@@ -14,6 +14,5 @@ export const load = (async () => {
 	});
 
 	works = response.items;
-	console.log(works);
 	return { works };
 }) satisfies PageServerLoad;

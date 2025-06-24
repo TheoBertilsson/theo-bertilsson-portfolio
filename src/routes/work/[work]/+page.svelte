@@ -3,7 +3,7 @@
 	import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 	let { data }: { data: PageData } = $props();
-	console.log(data.work[0].fields);
+
 	const aboutContent = documentToHtmlString(data.work[0].fields.about);
 	const challengeContent = documentToHtmlString(data.work[0].fields.challenge);
 	const resultContent = documentToHtmlString(data.work[0].fields.results);
