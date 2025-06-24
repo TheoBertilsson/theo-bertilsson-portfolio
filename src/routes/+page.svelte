@@ -38,7 +38,7 @@
 			</div>
 			<div class="flex w-full max-w-5xl flex-col gap-4 sm:grid sm:grid-cols-2">
 				{#each data.works as work}
-					<a href={`/${work.fields.slug}`}
+					<a href={`/work/${work.fields.slug}`}
 						><img
 							src={work.fields.thumbnail?.fields.file.url}
 							alt=""
